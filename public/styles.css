@@ -1,0 +1,108 @@
+/* styles.css */
+
+/* Gaya tambahan untuk judul halaman */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    margin-top: 20px;
+  }
+
+  .navbar {
+    background-color: #000;
+  }
+
+  .navbar-brand {
+    color: #1db954;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .table {
+    background-color: #121212;
+    color: #fff;
+  }
+
+  .table th {
+    border: none;
+    color: #b3b3b3;
+    font-weight: bold;
+  }
+
+  .table td {
+    border-color: #333;
+  }
+
+  .table td:first-child,
+  .table th:first-child {
+    padding-left: 20px;
+  }
+
+  .badge-primary {
+    background-color: #1db954;
+  }
+
+  .btn-primary {
+    background-color: #1db954;
+    border-color: #1db954;
+    color: #fff;
+  }
+
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background-color: #168f3c;
+    border-color: #168f3c;
+    color: #fff;
+  }
+
+  .form-control {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+  }
+
+  .form-control:focus {
+    background-color: #333;
+    color: #fff;
+    border-color: #333;
+    box-shadow: none;
+  }
+
+  .btn-link {
+    color: #1db954;
+    text-decoration: none;
+  }
+
+  .btn-link:hover {
+    text-decoration: underline;
+  }
+
+  .text-center {
+    text-align: center;
+  }
+  footer {
+    background-color: #000;
+    color: #b3b3b3;
+    padding: 10px 0;
+  }
+
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer-text {
+    font-size: 14px;
+  }
+
+  .footer-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    fill: #b3b3b3;
+  }
+  

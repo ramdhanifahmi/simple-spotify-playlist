@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <!-- Tambahkan link CSS Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Konten sidebar di sini -->
+  </div>
+
+  <!-- Content -->
+  <div class="content">
+    <!-- Header -->
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Playlist App</a>
+      </nav>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <div class="container">
+            <h1>Playlist</h1>
+        
+            <!-- Form Add Song -->
+            <h2>Add Song to Playlist</h2>
+            <form action="/playlist" method="POST">
+              <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" class="form-control" id="title" name="title">
+              </div>
+              <div class="form-group">
+                <label for="artists">Artists:</label>
+                <input type="text" class="form-control" id="artists" name="artists">
+              </div>
+              <div class="form-group">
+                <label for="url">URL:</label>
+                <input type="text" class="form-control" id="url" name="url">
+              </div>
+              <button type="submit" class="btn btn-primary">Add Song</button>
+            </form>
+        
+           <!-- Most Played Songs -->
+  <h2>Most Played Songs</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Artists</th>
+        <th>Play Count</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% sortedPlaylist.forEach(function(song) { %>
+        <tr>
+          <td><%= song.title %></td>
+          <td><%= song.artists.join(', ') %></td>
+          <td><%= song.playCount %></td>
+          <td>
+            <form action="/playlist/<%= sortedPlaylist.indexOf(song) %>" method="GET" class="d-inline">
+              <button type="submit" class="btn btn-link">Play</button>
+            </form>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+
+  <!-- Playlist -->
+  <h2>All Songs</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Artists</th>
+        <th>Play Count</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% playlist.forEach(function(song) { %>
+        <tr>
+          <td><%= song.title %></td>
+          <td><%= song.artists.join(', ') %></td>
+          <td><%= song.playCount %></td>
+          <td>
+            <form action="/playlist/<%= playlist.indexOf(song) %>" method="GET" class="d-inline">
+              <button type="submit" class="btn btn-link">Play</button>
+            </form>
+          </td>
+        </tr>
+      <% }); %>
+    </tbody>
+  </table>
+          </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="text-center">
+        &copy; 2023 Playlist App
+      </div>
+    </footer>
+  </div>
+
+  <!-- Tambahkan script Bootstrap -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
